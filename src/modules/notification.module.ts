@@ -5,6 +5,9 @@ import {
   Notification,
   NotificationSchema,
 } from '../database/schemas/notification.schema';
+import { NotificationController } from '../controllers/app.controller';
+import { NotificationService } from '../services/notification.service';
+import { NotificationRepository } from '../database/repositories/notification.repository';
 
 @Module({
   imports: [
@@ -13,7 +16,7 @@ import {
       { name: Notification.name, schema: NotificationSchema },
     ]),
   ],
-  controllers: [],
-  providers: [],
+  controllers: [NotificationController],
+  providers: [NotificationService, NotificationRepository],
 })
 export class NotificationModule {}
