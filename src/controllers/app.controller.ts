@@ -6,7 +6,7 @@ import { NotificationService } from '../services/notification.service';
 export class NotificationController {
   constructor(private readonly notificationService: NotificationService) {}
 
-  @EventPattern('testando')
+  @EventPattern('createAccount')
   sendNotification(data: any): any {
     const result = this.notificationService.sendNotification(data);
     return result;

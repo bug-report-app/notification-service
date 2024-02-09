@@ -6,6 +6,9 @@ export type NotificationDocument = HydratedDocument<Notification>;
 @Schema()
 export class Notification {
   @Prop()
+  account_id: string;
+
+  @Prop()
   name: string;
 
   @Prop()
